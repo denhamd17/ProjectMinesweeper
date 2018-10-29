@@ -1,0 +1,12 @@
+Progress Update #1:
+-What did your team do last week?
+  We researched Minesweeper, and decided that we were going to do a 2-player version of the game through Peer-to-peer connection that
+  establishes a constant communication between the two players throughout the game.
+-What will your team do this week?
+  We plan to agree on a design on how to implement the code so that each of us are on the same page on how we will code the game. We
+  don't know yet if we'll have time this week to start coding, but we will at least know how we are going to implement 2-player
+  functionality to Minesweeper.
+-Any blocking issues/challenges need to be addressed?
+  There hasn't been many issues or challenges regarding our project since we haven't started coding yet. So far, every team member has
+  agreed on our goal to make a 2-player Minesweeper game. However, it is possible that we may run into several issues down the road as
+  we start implementing the code, but we will hopefully address them accordingly should they happen.

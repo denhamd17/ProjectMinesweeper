@@ -32,3 +32,8 @@ d. Plan:
 - Debugging, polishing if possible.
 
 e. Team members: Camden Parsons, Giga Apkhaidze, Devin Denham
+
+# Comments
+1. Have a better formatting of the whole document. You can download the README.md template from Blackboard and follow the formatting
+2. Write more details about the deliverables. Think about what you are going to demo in the final presentation and compile the list of features to be delivered accordingly
+3. Be more specific on the plan for each week. For example, implementing the code is too vague. What features in particular you implement this week, etc.

@@ -39,7 +39,20 @@
   * Because we still have not began coding yet, there are no major issues or challenges that need to addressed yet. That said, we may run
   into issues once we start coding the game, and we may even run into issues with our design. However, we are confident that we can
   address whatever issue comes our way.
+  
+  
+## Week 3
 
+### What did your team do last week?
+
+* We began coding 2-player functionality to Minesweeper, and we are trying to make sure that we get the networking aspect of it working properly.
+
+### What will your team do this week?
+
+* We will try to finish up our 2-player functionality, and update github with our progress once that it is finished. We will try to add some graphics to the game to improve the interface, and hopefully continue collaborating via Discord, email, and meeting in person.
+
+### Any blocking issues/challenges need to be addressed?
+* As of writing this progress update, we are not totally finished with implementing 2-player functionality. That said, we are currently working to get that done as our top priority. We expect to be done with not only this goal, but also at least make progress in the rest of our code.
 
 
 Comments:

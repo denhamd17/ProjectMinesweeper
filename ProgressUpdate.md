@@ -49,10 +49,23 @@
 
 ### What will your team do this week?
 
-* We will try to finish up our 2-player functionality, and update github with our progress once that it is finished. We will try to add some graphics to the game to improve the interface, and hopefully continue collaborating via Discord, email, and meeting in person.
+* We will try to finish up our 2-player functionality, add some graphics to the game to improve the interface, and hopefully continue collaborating via Discord, email, and meeting in person.
 
 ### Any blocking issues/challenges need to be addressed?
 * As of writing this progress update, we are not totally finished with implementing 2-player functionality. That said, we are currently working to get that done as our top priority. We expect to be done with not only this goal, but also at least make progress in the rest of our code.
+
+## Week 4
+
+### What did your team do last week?
+
+* We finished our 2-player functionality implementation, and we are working to making graphics for the game to improve the interface.
+
+### What will your team do this week?
+
+* We will try to finish our graphics coding this week, and get working on coding for the rest of our deliverables for the project. We will continue to collaborate via Discord, email, and meeting in person.
+
+### Any blocking issues/challenges need to be addressed?
+* We are still trying to figure out how to implement our other deliverables such as potentially adding the ability to show a bomb if the player knows where one is hiding, as well as potentially making each game between the 2 players be divided into rounds with the winner being the first to, for example, 2 wins in attempt to balance the pace each player might play.
 
 
 Comments:

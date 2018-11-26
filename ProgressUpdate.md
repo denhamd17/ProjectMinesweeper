@@ -58,7 +58,7 @@
 
 ### What did your team do last week?
 
-* We finished our 2-player functionality implementation, and we are working to making graphics for the game to improve the interface.
+* We continued working on our 2-player functionality implementation, and we are working to making graphics for the game to improve the interface.
 
 ### What will your team do this week?
 
@@ -66,6 +66,20 @@
 
 ### Any blocking issues/challenges need to be addressed?
 * We are still trying to figure out how to implement our other deliverables such as potentially adding the ability to show a bomb if the player knows where one is hiding, as well as potentially making each game between the 2 players be divided into rounds with the winner being the first to, for example, 2 wins in attempt to balance the pace each player might play.
+
+## Week 5
+
+### What did your team do last week?
+
+* We continued working on networking and finished most of the graphical interface.
+
+### What will your team do this week?
+
+* We will finish up what needs to be done in order to get the game running for the demo this week. Any other details and minor deliverables we may add if there is time to add them. Finishing the networking aspect and making the game run properly is our top priority.
+
+### Any blocking issues/challenges need to be addressed?
+
+* Because we're still trying to get the networking to work, we have the challenge of addressing any errors that come our way when finishing the code. However, we are confident that we can get the game running by the end of this week.
 
 
 Comments:

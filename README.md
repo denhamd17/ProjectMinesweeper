@@ -56,6 +56,19 @@ blocking issues or challenges that we may face.
 expand beyond this project. For example, thinking about implementing a client-server architecture
 should this game involve more than 2 players in the future.
 
+# Getting Started
+Install
+
+Run
+
+# Features
+1. 2-player version of Minesweeper using peer-to-peer connection.
+2. The players can choose the size of the boards before the start of the game.
+3. The players can see both boards, but can only interact with their own board.
+4. The game is divided into rounds (for example, a best of 7), where the first to 4 wins in this case wins the game.
+
+# Demo Video
+
 # Team members: 
 * Camden Parsons, Programmer
 * Giga Apkhaidze, Programmer

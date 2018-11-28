@@ -61,6 +61,19 @@ should this game involve more than 2 players in the future.
 * Giga Apkhaidze, Programmer
 * Devin Denham, Programmer
 
+# Getting Started
+Install
+
+Run
+
+# Features
+* 2-player version of Minesweeper using peer-to-peer connection
+* Choose the size of the boards at the start of the game.
+* The game is divided into rounds (for example a best of 7), where the first player to reach 4 wins in that case wins the game.
+* The players can see both boards, but can only interact with their own board
+
+# Demo Video
+
 # Comments
 1. Have a better formatting of the whole document. You can download the README.md template from Blackboard and follow the formatting
 2. Write more details about the deliverables. Think about what you are going to demo in the final presentation and compile the list of features to be delivered accordingly

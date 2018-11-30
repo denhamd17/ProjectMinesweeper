@@ -12,7 +12,7 @@ public class Minesweeper extends EasyApp {
 	Button[][] tiles,tiles2;
 	Label line,line2,line3;
 	
-	Label score1, score2, round;
+	public Label score1, score2, round;
 	int scoreP1, scoreP2, roundnum;
 	boolean isHost=false;
 	Server s;
@@ -33,6 +33,11 @@ public class Minesweeper extends EasyApp {
 	    }
 	}
 	
+	void setRound() {
+		roundnum++;
+		round.setText("Round "+roundnum+"/7");
+	}
+	
 	public void update() {
 		String msg;
 		
@@ -40,7 +45,7 @@ public class Minesweeper extends EasyApp {
 			if(isHost) {
 				
 				if((msg=s.recieveMsg())!=null) {
-					System.out.println(msg);
+					//System.out.println(msg);
 					
 					if(msg.equals("update")) tiles2Update();
 					if(msg.equals("bomb")) readBombMessage();
@@ -49,7 +54,7 @@ public class Minesweeper extends EasyApp {
 				}
 			}else {
 				if((msg=c.recieveMsg())!=null) {
-					System.out.println(msg);
+					//System.out.println(msg);
 					
 					if(msg.equals("update")) tiles2Update();
 					if(msg.equals("bomb")) readBombMessage();
@@ -245,6 +250,27 @@ public class Minesweeper extends EasyApp {
 		int width =2 * 40 * rows + 15;
 		int height = 40 * columns + 200;
 		
+		if(roundnum>=7) {
+			int p1s= Integer.parseInt(score1.getText().split(" ")[2]);
+			int p2s= Integer.parseInt(score2.getText().split(" ")[0]);
+			
+			if(p1s>p2s) {
+				new EndScreen(true);
+			}else {
+				new EndScreen(false);
+			}
+			
+			if(isHost) {
+				s.close();
+			}else {
+				c.close();
+			}
+			timer.cancel();
+			dispose();
+		}
+		
+		
+		setRound();
 		
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < columns; j++) {
@@ -532,6 +558,26 @@ public class Minesweeper extends EasyApp {
 		tiles2[i][j].setBackground(Color.RED);
 		tiles2[i][j].setLabel("B");
 		
+		if(roundnum>=7) {
+			int p1s= Integer.parseInt(score1.getText().split(" ")[2]);
+			int p2s= Integer.parseInt(score2.getText().split(" ")[0]);
+			
+			if(p1s>p2s) {
+				new EndScreen(true);
+			}else {
+				new EndScreen(false);
+			}
+			
+			if(isHost) {
+				s.close();
+			}else {
+				c.close();
+			}
+			timer.cancel();
+			dispose();
+		}
+		
+		
 		Timer t = new Timer();
 		
 		t.schedule(new Reseter(), 1500);
@@ -573,6 +619,14 @@ public class Minesweeper extends EasyApp {
 		
 		if (source == back) {
 			new Start();
+			
+			if(isHost) {
+				s.close();
+			}else {
+				c.close();
+			}
+			timer.cancel();
+			
 			dispose();
 		}
 
@@ -594,13 +648,11 @@ public class Minesweeper extends EasyApp {
 						
 						sendBombMessage(i,j);
 						
-						if(roundnum == 7) {
-							new EndScreen(false);
-						}else {
-							Timer t = new Timer();
+						
+						Timer t = new Timer();
 							
-							t.schedule(new Reseter(), 1500);
-						}
+						t.schedule(new Reseter(), 1500);
+						
 						//dispose();
 					} else {
 						tiles[i][j].setLabel(tiles[i][j].getName());
@@ -614,22 +666,9 @@ public class Minesweeper extends EasyApp {
 						if (check(tiles)) {
 							
 							
-							if(roundnum == 7) {
-								new EndScreen(true);
+							
 								
-								if(isHost) {
-									s.close();
-								}else {
-									c.close();
-								}
-								
-							}
-							else {
-								Timer t = new Timer();
-								
-								t.schedule(new Reseter(), 1500);
-								
-							}
+							
 							
 							
 							//dispose();

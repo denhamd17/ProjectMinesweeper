@@ -1,9 +1,12 @@
 package minesweeper;
 
 import java.awt.*;
+import java.util.Random;
 
 public class Start extends EasyApp {
-
+	
+	public static int port;
+	
 	public static void main(String[] args) {
 		new Start();
 	}
@@ -13,6 +16,9 @@ public class Start extends EasyApp {
 	//Button times20 = addButton("20x20", 100, 350, 100, 50, this);
 
 	public Start() {
+		
+		
+		
 		setTitle("Minesweeper");
 		setBounds(0, 0, 300, 450);
 		this.setLocationRelativeTo(null);

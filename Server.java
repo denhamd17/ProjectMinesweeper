@@ -14,7 +14,7 @@ public class Server extends User {
 		
 		try
         { 
-			ServerSocket serverSocket = new ServerSocket(6799);
+			ServerSocket serverSocket = new ServerSocket(700);
 			System.out.println("This is server.");
 			socket = serverSocket.accept();
             //socket = new Socket(address, port); 
@@ -57,9 +57,11 @@ public class Server extends User {
 	}
 	public void close() {
 		try {
+			socket.close();
 			receiveRead.close();
 			write.close();
-		    socket.close();
+		    
+		    
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

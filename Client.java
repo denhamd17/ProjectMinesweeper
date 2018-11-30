@@ -3,6 +3,7 @@ package minesweeper;
 import java.io.*;
 import java.net.*;
 import java.net.Socket;
+import java.util.Random;
 public class Client extends User {
 	
 	private Socket socket;
@@ -14,7 +15,7 @@ public class Client extends User {
 		
 		try
         { 
-			socket = new Socket("127.0.0.1", 6799);
+			socket = new Socket("127.0.0.1", 700);
             //socket = new Socket(address, port); 
             System.out.println("Connected"); 
             

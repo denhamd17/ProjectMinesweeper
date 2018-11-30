@@ -56,33 +56,25 @@ blocking issues or challenges that we may face.
 expand beyond this project. For example, thinking about implementing a client-server architecture
 should this game involve more than 2 players in the future.
 
-# Getting Started
-Install
-
-Run
-
-# Features
-1. 2-player version of Minesweeper using peer-to-peer connection.
-2. The players can choose the size of the boards before the start of the game.
-3. The players can see both boards, but can only interact with their own board.
-4. The game is divided into rounds (for example, a best of 7), where the first to 4 wins in this case wins the game.
-
-# Demo Video
-
 # Team members: 
 * Camden Parsons, Programmer
 * Giga Apkhaidze, Programmer
 * Devin Denham, Programmer
 
 # Getting Started
-Install
 
-Run
+## Install
+* Download Eclipse Java Neon 3
+* Install Eclipse on your computer
+* Make a new Java Project in Eclipse and add the java files to the project folder
+
+## Run
+* Run the Start class twice to get two instances of the game. One for the host and the other for the client
+* Two windows will appear with two buttons for a host or a client. Select host for one of them and client for the other. The boards will then be generated, and the players can begin to play the game.
 
 # Features
 * 2-player version of Minesweeper using peer-to-peer connection
-* Choose the size of the boards at the start of the game.
-* The game is divided into rounds (for example a best of 7), where the first player to reach 4 wins in that case wins the game.
+* The game is divided into 7 rounds, where the player with the most amount of wins will win the entire game.
 * The players can see both boards, but can only interact with their own board
 
 # Demo Video

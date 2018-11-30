@@ -32,13 +32,10 @@
 
 ### What will your team do this week?
   
-* We will begin to code the game whenever we meet up, and we will try to code on our own and collaborate via email or Discord to make sure
-  our code is working. Hopefully, we can steadily make progress to finish the game within the time that we have to do it.
+* We will begin to code the game whenever we meet up, and we will try to code on our own and collaborate via email or Discord to make sure our code is working. Hopefully, we can steadily make progress to finish the game within the time that we have to do it.
 
 ### Any blocking issues/challenges need to be addressed?
-  * Because we still have not began coding yet, there are no major issues or challenges that need to addressed yet. That said, we may run
-  into issues once we start coding the game, and we may even run into issues with our design. However, we are confident that we can
-  address whatever issue comes our way.
+  * Because we still have not began coding yet, there are no major issues or challenges that need to addressed yet. That said, we may run into issues once we start coding the game, and we may even run into issues with our design. However, we are confident that we can address whatever issue comes our way.
   
   
 ## Week 3
@@ -71,7 +68,7 @@
 
 ### What did your team do last week?
 
-* We continued working on networking and finished most of the graphical interface.
+* We continued working on networking and finished most of the graphical interface. At this point, we now have the game working to the point where it now needs more polishing and other additions such as a lobby system.
 
 ### What will your team do this week?
 
@@ -79,7 +76,21 @@
 
 ### Any blocking issues/challenges need to be addressed?
 
-* Because we're still trying to get the networking to work, we have the challenge of addressing any errors that come our way when finishing the code. However, we are confident that we can get the game running by the end of this week.
+* Because we're still trying to get the lobby system to work, we have the challenge of addressing any errors that come our way when finishing the code. We're also facing the challenge of making other additions to the game if there is enough time for us to implement them.
+
+## Week 6
+
+### What did your team do last week?
+
+* We finished coding the game to make it work properly, and feel good about what we have created over the past 6 weeks.
+
+### What will your team do this week?
+
+* We will continue to put work on the game beyond this project to make the game even more polished, and add it to our portfolios.
+
+### Any blocking issues/challenges need to be addressed?
+
+* There may be issues we face as we work on the game beyond this project, but our experience working on this project will hopefully help us address any future challenges that come our way.
 
 
 Comments:

@@ -78,21 +78,6 @@
 
 * Because we're still trying to get the lobby system to work, we have the challenge of addressing any errors that come our way when finishing the code. We're also facing the challenge of making other additions to the game if there is enough time for us to implement them.
 
-## Week 6
-
-### What did your team do last week?
-
-* We finished coding the game to make it work properly, and feel good about what we have created over the past 6 weeks.
-
-### What will your team do this week?
-
-* We will continue to put work on the game beyond this project to make the game even more polished, and add it to our portfolios.
-
-### Any blocking issues/challenges need to be addressed?
-
-* There may be issues we face as we work on the game beyond this project, but our experience working on this project will hopefully help us address any future challenges that come our way.
-
-
 Comments:
 
 1. Make sure to follow ProgressUpdates template. This is a .md file as well, not just an arbitrary file. Try to follow the template strictly to make it more readable and presentable.

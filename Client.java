@@ -9,13 +9,16 @@ public class Client extends User {
 	private Socket socket;
 	private PrintWriter write;
 	private BufferedReader receiveRead;
+	private boolean open;
+	
+	
 	
 	public Client() {
 		//String address, int port
 		
 		try
         { 
-			socket = new Socket("127.0.0.1", 700);
+			socket = new Socket("127.0.0.1", 701);
             //socket = new Socket(address, port); 
             System.out.println("Connected"); 
             
@@ -29,7 +32,7 @@ public class Client extends User {
     		
     		receiveRead = new BufferedReader(new InputStreamReader(inStream));
     		
-    		
+    		open=true;
         } 
         catch(UnknownHostException u) 
         { 
@@ -43,6 +46,7 @@ public class Client extends User {
 	}
 	
 	public String recieveMsg() {
+		if(!open) close();
 		try {
 			return (receiveRead.readLine());
 		} catch (IOException e) {
@@ -56,9 +60,10 @@ public class Client extends User {
 	}
 	public void close() {
 		try {
-			receiveRead.close();
-			write.close();
+			socket.shutdownOutput(); 
 		    socket.close();
+		    open=false;
+		    System.out.println("c closed");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -66,32 +71,15 @@ public class Client extends User {
 		
 	}
 	
-//	public static void main(String[] args) throws Exception {
-//		
-//		
-//		BufferedReader keyRead = new BufferedReader(new InputStreamReader(System.in));
-//		
-//		OutputStream outStream = socket.getOutputStream();
-//		PrintWriter write = new PrintWriter(outStream, true);
-//		
-//		InputStream inStream = socket.getInputStream();
-//		DataInputStream dataInputStream = new DataInputStream(inStream);
-//		String sentence = new String (dataInputStream.readUTF());
-//		BufferedReader receiveRead = new BufferedReader(new InputStreamReader(inStream));
-//		
-//		System.out.println("Start chatting, and press Enter");
-//		
-//		String receiveMessage, sendMessage;
-//		while(true) {
-//			sendMessage = keyRead.readLine();
-//			write.println(sendMessage);
-//			if((receiveMessage = receiveRead.readLine()) != null) {
-//				System.out.println(receiveMessage);
-//			}
-//		}
-//		//receiveRead.close();
-//		//inStream.close();
-//		//socket.close();
-//	}
+	protected void finalize(){
+		//Objects created in run method are finalized when
+		//program terminates and thread exits
+		     try{
+		        socket.close();
+		    } catch (IOException e) {
+		        System.out.println("Could not close socket");
+		        System.exit(-1);
+		    }
+		  }
 
 }

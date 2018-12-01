@@ -49,6 +49,7 @@ public class Minesweeper extends EasyApp {
 					
 					if(msg.equals("update")) tiles2Update();
 					if(msg.equals("bomb")) readBombMessage();
+					if(msg.equals("terminate")) terminate();
 					
 					msg=null;
 				}
@@ -58,7 +59,7 @@ public class Minesweeper extends EasyApp {
 					
 					if(msg.equals("update")) tiles2Update();
 					if(msg.equals("bomb")) readBombMessage();
-					
+					if(msg.equals("terminate")) terminate();
 					msg=null;
 				}
 			}
@@ -260,12 +261,8 @@ public class Minesweeper extends EasyApp {
 				new EndScreen(false);
 			}
 			
-			if(isHost) {
-				s.close();
-			}else {
-				c.close();
-			}
-			timer.cancel();
+			sendTerminate();
+			terminate();
 			dispose();
 		}
 		
@@ -384,7 +381,7 @@ public class Minesweeper extends EasyApp {
 			for (int j = 0; j < tiles[0].length; j++) {
 				
 				if(!tiles[i][j].isEnabled()) {
-					System.out.println("ss");
+					
 					sendUpdateMessage(i,j,tiles[i][j].getLabel());
 				}
 				
@@ -583,6 +580,27 @@ public class Minesweeper extends EasyApp {
 		t.schedule(new Reseter(), 1500);
 	}
 	
+	
+	public void terminate() {
+		if(isHost) {
+			s.close();
+		}else {
+			c.close();
+		}
+		timer.cancel();
+		dispose();
+		System.exit(-1);
+	}
+	
+	public void sendTerminate() {
+		
+		if(isHost) {
+			s.sendMsg("terminate");
+		}else {
+			c.sendMsg("terminate");
+		}
+		
+	}
 	public void tiles2Update() {
 		
 		String label;
@@ -620,12 +638,8 @@ public class Minesweeper extends EasyApp {
 		if (source == back) {
 			new Start();
 			
-			if(isHost) {
-				s.close();
-			}else {
-				c.close();
-			}
-			timer.cancel();
+			sendTerminate();
+			terminate();
 			
 			dispose();
 		}

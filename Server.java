@@ -8,13 +8,25 @@ public class Server extends User {
 	private Socket socket;
 	private PrintWriter write;
 	private BufferedReader receiveRead;
+	public boolean open;
+	
+	protected void finalize(){
+		//Objects created in run method are finalized when
+		//program terminates and thread exits
+		     try{
+		        socket.close();
+		    } catch (IOException e) {
+		        System.out.println("Could not close socket");
+		        System.exit(-1);
+		    }
+		  }
 	
 	public Server() {
 		//String address, int port
 		
 		try
         { 
-			ServerSocket serverSocket = new ServerSocket(700);
+			ServerSocket serverSocket = new ServerSocket(701);
 			System.out.println("This is server.");
 			socket = serverSocket.accept();
             //socket = new Socket(address, port); 
@@ -29,6 +41,7 @@ public class Server extends User {
     		
     		receiveRead = new BufferedReader(new InputStreamReader(inStream));
     		
+    		open=true;
     		
         } 
         catch(UnknownHostException u) 
@@ -43,11 +56,12 @@ public class Server extends User {
 	}
 	
 	public String recieveMsg() {
+		if(!open) close();
 		try {
 			return (receiveRead.readLine());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		return null;
 	}
@@ -57,10 +71,10 @@ public class Server extends User {
 	}
 	public void close() {
 		try {
+			socket.shutdownOutput(); 
 			socket.close();
-			receiveRead.close();
-			write.close();
-		    
+			open=false;
+			System.out.println("s closed");
 		    
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -70,35 +84,6 @@ public class Server extends User {
 	}
 	
 	
-	
-//	public static void main(String[] args) throws Exception {
-//		ServerSocket serverSocket = new ServerSocket(6781);
-//		System.out.println("This is server.");
-//		Socket socket = serverSocket.accept();
-//		
-//		BufferedReader keyRead = new BufferedReader(new InputStreamReader(System.in));
-//		
-//		OutputStream outStream = socket.getOutputStream();
-//		DataOutputStream dataOutStream = new DataOutputStream(outStream);
-//		PrintWriter write = new PrintWriter(outStream, true);
-//		
-//		InputStream inStream = socket.getInputStream();
-//		BufferedReader receiveRead = new BufferedReader(new InputStreamReader(inStream));
-//		
-//		dataOutStream.writeUTF("Hello!");
-//		
-//		String receiveMessage, sendMessage;
-//		while(true) {
-//			if((receiveMessage = receiveRead.readLine()) != null) {
-//				System.out.println(receiveMessage);
-//			}
-//			sendMessage = keyRead.readLine();
-//			write.println(sendMessage);
-//			write.flush();
-//		}
-//		//receiveRead.close();
-//		//socket.close();
-//		//serverSocket.close();
-//	}
+
 
 }
